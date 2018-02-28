@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <ol>
+            <li class="bradcrumb-item"><a href="/clients/list">List</a></li>
+        </ol>
+        <h2>Add Template</h2>
+        <form method="post" action="/clients/update/<%= clients.id %>">
+            <div class="form-group">
+                <label >Name: <%= clients.id %></label>
+                <input type="text" name="uname" class="form-control" value="<%= clients.name %>">
+            </div>
+            <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" class="form-control" value="<%= clients.password %>">
+    
+            </div>
+            <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" class="form-control" value="<%= clients.email %>">
+    
+            </div>  
+            <input type="submit" value="submit" class="btn btn-primary">
+        </form>
+    </div>
+</div>

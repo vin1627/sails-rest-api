@@ -1,0 +1,26 @@
+<h1 class="display-4">My Sails Js</h1>
+<a href="/clients/add" class="btn btn-success">Create New</a>
+<div class="container">
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% clients.forEach(function(list){ %>
+                    <tr>
+                        
+                        <td><%= list.name %></td>
+                        <td><%= list.email %></td>
+                        <td><a href="/clients/edit/<%= list.id %>" class="btn btn-primary">edit</a> <a href="/clients/delete/<%= list.id %>" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                <% }) %>
+                  
+            </tbody>
+        </table>
+    </div>
+</div>
